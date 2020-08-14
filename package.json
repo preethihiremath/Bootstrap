@@ -19,5 +19,10 @@
     "font-awesome": "^4.7.0",
     "jquery": "^3.5.1",
     "popper.js": "^1.12.9"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://preethi_hiremath@bitbucket.org/preethi_hiremath/dark_frost.git"
+  },
+  "homepage": "https://bitbucket.org/preethi_hiremath/dark_frost#readme"
 }
