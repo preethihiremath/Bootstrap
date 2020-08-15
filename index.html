@@ -6,10 +6,13 @@
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <meta http-equiv="x-ua-compatible" content="ie=edge">
         <!--BOOTSTRAP CSS-->
-            <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-            <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
-            <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
-            <link rel="stylesheet" href="css/styles.css">
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+            
             <title>Ristorante Con Fusion</title>
         </head>
 
@@ -17,7 +20,7 @@
             <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
                 
                 <div class="container">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <button class="navbar-toggler" type="button" >
                     <span class="navbar-toggler-icon"></span>
                     </button>
                     <a class="navbar-brand mr-auto" href="#"><img src="img/logo.png" height="30" width="41"></a>
@@ -29,9 +32,15 @@
                         <li class="nav-item"><a  class="nav-link" href="#"><span class=" fa fa-list fa-lg"></span>MENU</a></li>
                         <li class="nav-item"><a class="nav-link" href="contactus.html"><span class=" fa fa-address-card fa-lg"></span>CONTACT</a></li>
                     </ul>
-                    <span class="navbar-text">
-                        <a data-toggle="modal" data-target="#loginModal">
-                        <span class="fa fa-sign-in"></span> Login</a>
+                    <span class="navbar-text" >
+                     
+                    <button type="button"  class="btn btn-default" id="loginModalToggle" >
+                        <a>
+                            <span class="fa fa-sign-in"></span> Login
+                        </a>   
+                    </button>
+                         
+                    
                     </span>
                 </div>
                 </div>
@@ -164,7 +173,7 @@
                             <a ></a>
                             
                             <a role="button" class="btn btn-block nav-link btn-warning"
-                            data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                            id="reserveModalToggle">Reserve Table</a>
                         </div>
                     </div>
                 </div>
@@ -238,7 +247,7 @@
                     </div>
                     <div class="col col-sm order-sm-first col-md">
                         <div class="media">
-                            <img class="d-flex mr-3 img-thumbnail align-self-center"
+                            <img class="d-flex ml-3 img-thumbnail align-self-center"
                                     src="img/uthappizza.png" alt="Uthappizza">
                             <div class="media-body">
                                 <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
@@ -264,7 +273,7 @@
                             <h2 class="mt-0">Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
                         <p  class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
                             </div>
-                            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
+                            <img class="d-flex ml-3 img-thumbnail align-self-center" src="img/buffet.png" alt="buffet">
                         </div>
                         
                     </div>
@@ -276,7 +285,7 @@
                     </div>
                     <div class="col col-sm order-sm-first">
                         <div class="media">
-                            <img class="d-flex mr-3 img-thumbnail align-self-center"
+                            <img class="d-flex ml-3 img-thumbnail align-self-center"
                                     src="img/alberto.png" alt="Alberto Somayya">
                             <div class="media-body">
                                 <h2 class="mt-0">Alberto Somayya</h2>
@@ -334,31 +343,13 @@
                 </div>
                 </div>
             </footer>
-            <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
-            <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
-            <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-            <script>
-                $(document).ready(function(){
-                    $("#mycarousel").carousel( { interval: 2000 } );
-                    
-                    $("#carousel-pause").click(function(){
-                    $("#mycarousel").carousel('pause');
-                        }); 
-                        
-                $("#carouselButton").click(function(){
-                if ($("#carouselButton").children("span").hasClass('fa-pause')) {
-                    $("#mycarousel").carousel('pause');
-                    $("#carouselButton").children("span").removeClass('fa-pause');
-                    $("#carouselButton").children("span").addClass('fa-play');
-                }
-                else if ($("#carouselButton").children("span").hasClass('fa-play')){
-                    $("#mycarousel").carousel('cycle');
-                    $("#carouselButton").children("span").removeClass('fa-play');
-                    $("#carouselButton").children("span").addClass('fa-pause');                    
-                }
-                });
-             });
-            </script>
+
+ <!-- build:js js/main.js -->
+ <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+ <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+ <script src="js/scripts.js"></script>
+ <!-- endbuild -->
         </body>
 
         </html>
